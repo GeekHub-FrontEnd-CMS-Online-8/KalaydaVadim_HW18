@@ -1,0 +1,37 @@
+.header-blog {
+  width: 100%;
+  min-height: 850px;
+  background: url('../img/about-bg-header.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(100%);
+}
+
+.header__content {
+  width: 100%;
+  min-height: 760px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header__content-headline {
+  color: #60606e;
+  font-family: 'Montserrat', 'sans-serif';
+  font-size: 36px;
+  text-transform: uppercase;
+  line-height: 48px;
+}
+
+.header__content-text {
+  color: #60606e;
+  font-family: 'Montserrat', 'sans-serif';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  margin-top: -18px;
+}

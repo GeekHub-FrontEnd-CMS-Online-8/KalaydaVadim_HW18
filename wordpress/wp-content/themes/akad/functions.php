@@ -1,0 +1,310 @@
+<?php
+/**
+ * Akad functions and definitions
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package Akad
+ */
+
+if ( ! function_exists( 'akad_setup' ) ) :
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
+	 */
+	function akad_setup() {
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 * If you're building a theme based on Akad, use a find and replace
+		 * to change 'akad' to the name of your theme in all the template files.
+		 */
+		load_theme_textdomain( 'akad', get_template_directory() . '/languages' );
+
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
+
+		/*
+		 * Let WordPress manage the document title.
+		 * By adding theme support, we declare that this theme does not use a
+		 * hard-coded <title> tag in the document head, and expect WordPress to
+		 * provide it for us.
+		 */
+		add_theme_support( 'title-tag' );
+
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
+		add_theme_support( 'post-thumbnails' );
+
+		// This theme uses wp_nav_menu() in one location.
+    register_nav_menus(array(
+      'primary' => __('Primary Menu', 'akad')
+    ));
+
+    add_filter( 'nav_menu_css_class', 'add_my_class_to_nav_menu', 10, 2 );
+    function add_my_class_to_nav_menu( $classes, $item ){
+      /* $classes содержит
+      Array(
+          [1] => menu-item
+          [2] => menu-item-type-post_type
+          [3] => menu-item-object-page
+          [4] => menu-item-284
+      )
+      */
+      $classes[] = 'header__nav-list';
+      $classes[] = 'footer__nav-list';
+
+      return $classes;
+    }
+
+    register_nav_menus(array(
+      'primary2' => __('Footer Menu', 'akad')
+    ));
+
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
+
+		// Set up the WordPress core custom background feature.
+		add_theme_support( 'custom-background', apply_filters( 'akad_custom_background_args', array(
+			'default-color' => 'ffffff',
+			'default-image' => '',
+		) ) );
+
+		// Add theme support for selective refresh for widgets.
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		/**
+		 * Add support for core custom logo.
+		 *
+		 * @link https://codex.wordpress.org/Theme_Logo
+		 */
+
+	}
+endif;
+add_action( 'after_setup_theme', 'akad_setup' );
+
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function akad_content_width() {
+	// This variable is intended to be overruled from themes.
+	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
+	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+	$GLOBALS['content_width'] = apply_filters( 'akad_content_width', 640 );
+}
+add_action( 'after_setup_theme', 'akad_content_width', 0 );
+
+/**
+ * Register widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function akad_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar', 'akad' ),
+		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Add widgets here.', 'akad' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'akad_widgets_init' );
+
+/**
+ * Enqueue scripts and styles.
+ */
+define('AK_THEME_ROOT', get_template_directory_uri());
+define('AK_CSS_DIR', AK_THEME_ROOT.'/layouts');
+define('AK_JS_DIR', AK_THEME_ROOT.'/js');
+define('AK_IMG_DIR', AK_THEME_ROOT.'/img');
+
+add_action( 'wp_enqueue_scripts', 'connectAllForHome');
+
+wp_deregister_script('jquery');
+
+function connectAllForHome() {
+  wp_enqueue_style( 'basic', AK_CSS_DIR.'/basic.css');
+  wp_enqueue_script( 'jquery-3.3.1', AK_JS_DIR.'/jquery-3.3.1.min.js');
+  if( is_home() ) {
+    wp_enqueue_style( 'header-home', AK_CSS_DIR.'/header-home.css');
+    wp_enqueue_style( 'history', AK_CSS_DIR.'/history.css');
+    wp_enqueue_style( 'whychoose', AK_CSS_DIR.'/whychoose.css');
+    wp_enqueue_style( 'portfolio', AK_CSS_DIR.'/portfolio.css');
+  }
+
+  if( is_page('about') ) {
+    wp_enqueue_style( 'header-us', AK_CSS_DIR.'/header-us.css');
+    wp_enqueue_style( 'what-we-do', AK_CSS_DIR.'/what-we-do.css');
+    wp_enqueue_style( 'benefits', AK_CSS_DIR.'/benefits.css');
+    wp_enqueue_style( 'dream-team', AK_CSS_DIR.'/dream-team.css');
+    wp_enqueue_style( 'bar', AK_CSS_DIR.'/bar.css');
+    wp_enqueue_style( 'testimonials-and-clients', AK_CSS_DIR.'/testimonials-and-clients.css');
+    wp_enqueue_style( 'slider', AK_CSS_DIR.'/slider.css');
+    wp_enqueue_style( 'clients', AK_CSS_DIR.'/clients.css');
+  }
+
+  if( is_page('blog') ) {
+    wp_enqueue_style( 'header-blog', AK_CSS_DIR.'/header-blog.css');
+    wp_enqueue_style( 'blog', AK_CSS_DIR.'/blog.css');
+  }
+  if( is_search() ) {
+    wp_enqueue_style( 'header-blog', AK_CSS_DIR.'/header-blog.css');
+    wp_enqueue_style( 'blog', AK_CSS_DIR.'/blog.css');
+    wp_enqueue_style( 'search', AK_CSS_DIR.'/search.css');
+  }
+  if( is_404() ) {
+    wp_enqueue_style( 'error', AK_CSS_DIR.'/error.css');
+  }
+  wp_enqueue_style( 'header', AK_CSS_DIR.'/header.css');
+  wp_enqueue_script( 'header-js', AK_JS_DIR.'/header.js');
+  wp_enqueue_style( 'newsletter', AK_CSS_DIR.'/newsletter.css');
+  wp_enqueue_style( 'footer', AK_CSS_DIR.'/footer.css');
+  wp_enqueue_style( 'theme', get_stylesheet_uri());
+
+}
+
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Functions which enhance the theme by hooking into WordPress.
+ */
+require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+
+
+function create_post_type_ak_benefits() {
+
+  register_post_type( 'ak_benefits',
+    array(
+      'labels' => array(
+        'name' => __( 'Benefits' ),
+        'singular_name' => __( 'Benefits' ),
+      ),
+      'public' => true,
+      'menu_icon'     => 'dashicons-format-aside',
+      'has_archive' => true,
+      'supports'           => array('title','thumbnail', 'excerpt')
+    )
+  );
+}
+add_action( 'init', 'create_post_type_ak_benefits' );
+
+
+
+function create_post_type_ak_team() {
+
+  register_post_type( 'ak_team',
+    array(
+      'labels' => array(
+        'name' => __( 'Person of team photo' ),
+        'singular_name' => __( 'Person of team photo' ),
+      ),
+      'public' => true,
+      'menu_icon'     => 'dashicons-groups',
+      'has_archive' => true,
+      'supports'           => array('title', 'thumbnail')
+    )
+  );
+}
+add_action( 'init', 'create_post_type_ak_team' );
+
+
+
+function create_post_type_ak_slider() {
+
+  register_post_type( 'ak_slider',
+    array(
+      'labels' => array(
+        'name' => __( 'Slider(MAX 4 SLIDES)' ),
+        'singular_name' => __( 'Slider(MAX 4 SLIDES)' ),
+      ),
+      'public' => true,
+      'menu_icon'     => 'dashicons-image-filter',
+      'has_archive' => true,
+      'supports'           => array('title', 'thumbnail', 'editor')
+    )
+  );
+}
+add_action( 'init', 'create_post_type_ak_slider' );
+
+
+
+function create_post_type_ak_clients() {
+
+  register_post_type( 'ak_clients',
+    array(
+      'labels' => array(
+        'name' => __( 'Clients(MAX 9)' ),
+        'singular_name' => __( 'Clients(MAX 9)' ),
+      ),
+      'public' => true,
+      'menu_icon'     => 'dashicons-screenoptions',
+      'has_archive' => true,
+      'supports'           => array('title', 'thumbnail')
+    )
+  );
+}
+add_action( 'init', 'create_post_type_ak_clients' );
+
+
+function create_taxonomy_ak_portfolio() {
+  register_taxonomy( 'categories_for_portfolio_posts', 'ak_portfolio_posts', array(
+      'labels' => array(
+        'name' => __( 'Categories for portfolio posts' ),
+        'singular_name' => __( 'Categories for portfolio posts' ),
+      ),
+      'public' => true,
+    )
+  );
+}
+
+add_action( 'init', 'create_taxonomy_ak_portfolio' );
+
+
+function create_post_type_ak_portfolio_posts() {
+
+  register_post_type( 'ak_portfolio_posts',
+    array(
+      'labels' => array(
+        'name' => __( 'Portfolio Posts' ),
+        'singular_name' => __( 'Portfolio Posts' ),
+      ),
+      'public' => true,
+      'menu_icon'     => 'dashicons-images-alt',
+      'has_archive' => true,
+      'supports'           => array('title', 'thumbnail'),
+      'taxonomies' => array('categories_for_portfolio_posts')
+    )
+  );
+}
+add_action( 'init', 'create_post_type_ak_portfolio_posts' );

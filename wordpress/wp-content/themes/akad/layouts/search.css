@@ -1,0 +1,37 @@
+.page-header {
+  display: none;
+}
+
+.screen-reader-text {
+  display: none;
+}
+
+.search {
+  display: flex;
+}
+
+.search-input {
+  width: 212px;
+  height: 40px;
+  color: #60606e;
+  font-family: 'Montserrat', 'sans-serif';
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  background-color: #ececec;
+  padding-left: 15px;
+}
+
+.search-submit {
+  width: 50px;
+  height: 40px;
+  color: #60606e;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  background-color: #ececec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

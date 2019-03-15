@@ -1,0 +1,66 @@
+.dream-team {
+  width: 100%;
+  min-height: 330px;
+}
+
+.dream-team__container {
+  width: 85%;
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.dream-team__headline {
+  position: relative;
+}
+
+.dream-team__headline-greenbox {
+  width: 68px;
+  height: 21px;
+  background: #7beec7;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 21px;
+}
+
+.dream-team__headline-text {
+  color: #60606e;
+  font-family: 'Montserrat', 'sans-serif';
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.dream-team-paragraph {
+  color: #60606e;
+  font-family: 'Open Sans', 'sans-serif';
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: -7px;
+}
+
+.dream-team__content {
+  max-width: 1240px;
+  min-height: 330px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 83px;
+}
+
+.dream-team__content-person {
+  width: 263px;
+  height: 334px;
+  overflow: hidden;
+  margin-bottom: 32px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.dream-team__content-person img{
+  width: 263px;
+  height: 334px;
+}
