@@ -16,7 +16,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?php bloginfo('name'); ?></title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
 
@@ -29,6 +28,14 @@
   <?php } ?>
 
   <?php if(is_page('about')) {  ?>
+    <header class="header-about">
+  <?php } ?>
+
+  <?php if(is_page('contact')) {  ?>
+    <header class="header-about">
+  <?php } ?>
+
+  <?php if(is_page('services')) {  ?>
     <header class="header-about">
   <?php } ?>
 
@@ -83,6 +90,24 @@
         <div class="header__content">
           <h2 class="header__content-headline">
             <?php the_title(); ?>
+          </h2>
+          <p class="header__content-text">home / <?php the_title(); ?></p>
+        </div>
+      <?php } ?>
+
+      <?php if(is_page('contact')) { ?>
+        <div class="header__content">
+          <h2 class="header__content-headline">
+            <?php the_title(); ?>
+          </h2>
+          <p class="header__content-text">home / <?php the_title(); ?></p>
+        </div>
+      <?php } ?>
+
+      <?php if(is_page('services')) { ?>
+        <div class="header__content">
+          <h2 class="header__content-headline">
+           Our <?php the_title(); ?>
           </h2>
           <p class="header__content-text">home / <?php the_title(); ?></p>
         </div>

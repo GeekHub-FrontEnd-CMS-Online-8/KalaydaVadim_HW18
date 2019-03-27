@@ -48,6 +48,15 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: .2s;
+}
+
+.bar-btn:hover {
+  background: #88FBD4;
+}
+
+.bar-btn:active {
+  background: #61D4AD;
 }
 
 @media (min-width: 320px) and (max-width: 578px) {

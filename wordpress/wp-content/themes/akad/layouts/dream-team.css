@@ -64,3 +64,10 @@
   width: 263px;
   height: 334px;
 }
+
+@media(min-width: 320px) and (max-width: 331px) {
+  .dream-team__headline-greenbox {
+    bottom: 57px;
+    left: 46px;
+  }
+}

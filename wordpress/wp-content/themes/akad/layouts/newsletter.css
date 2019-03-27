@@ -41,6 +41,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: .2s;
+}
+
+.newsletter__left-btn:hover {
+  background: #F9F9F9;
+}
+
+.newsletter__left-btn:active {
+  background: #F0F0F0;
 }
 
 .newsletter__right {
@@ -115,6 +124,15 @@
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+  transition: .2s;
+}
+
+.newsletter__right__content__form-btn:hover {
+  background: #88FBD4;
+}
+
+.newsletter__right__content__form-btn:active {
+  background: #61D4AD;
 }
 
 @media(min-width: 320px) and (max-width: 1087px) {

@@ -111,3 +111,10 @@
     min-height: 185px;
   }
 }
+
+@media(min-width: 320px) and (max-width: 347px) {
+  .footer__right__soc-logo {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}

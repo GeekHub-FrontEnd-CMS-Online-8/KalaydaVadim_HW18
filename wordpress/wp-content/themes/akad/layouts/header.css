@@ -106,9 +106,15 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 338px) {
-  .header__nav-list {
-    margin-left: 5px;
-    margin-right: 5px;
+@media (min-width: 320px) and (max-width: 360px) {
+  .header__nav-list a {
+    font-size: 11px;
+  }
+}
+
+@media(min-width: 320px) and (max-width: 338px) {
+  .header__nav-list a {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }

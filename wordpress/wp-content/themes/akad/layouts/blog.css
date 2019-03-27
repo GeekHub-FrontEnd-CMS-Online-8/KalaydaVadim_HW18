@@ -110,6 +110,15 @@
   line-height: 24px;
   text-transform: uppercase;
   margin-top: 5px;
+  transition: .2s;
+}
+
+.blog__post-more:hover {
+  color: #9696A4;
+}
+
+.blog__post-more:active {
+  color: #434351;
 }
 
 .blog__right {

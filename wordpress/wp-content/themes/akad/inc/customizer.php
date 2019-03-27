@@ -601,6 +601,808 @@ function akad_customize_register( $wp_customize ) {
     'settings'   => 'bar_text',
   ) ) );
 
+
+
+  //(PAGE: SERVICES) WHAT WE DO TOP
+
+  $wp_customize->add_section( 'services_what_we_do_top_section' , array(
+    'title'      => __( '(PAGE: SERVICES) What We Do Top section', 'akad' ),
+    'priority'   => 30,
+  ) );
+  // (PAGE: SERVICES) WHAT WE DO TOP HEADLINE
+  $wp_customize->add_setting( 'services_what_we_do_top_headline' , array(
+    'default'   => 'What we do',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_what_we_do_top_headline', array(
+    'label'      => __( 'Headline', 'akad' ),
+    'section'    => 'services_what_we_do_top_section',
+    'settings'   => 'services_what_we_do_top_headline',
+  ) ) );
+  // (PAGE: SERVICES) WHAT WE DO TOP TEXT
+  $wp_customize->add_setting( 'services_what_we_do_top_text' , array(
+    'default'   => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_what_we_do_top_text', array(
+    'label'      => __( 'Text', 'akad' ),
+    'section'    => 'services_what_we_do_top_section',
+    'settings'   => 'services_what_we_do_top_text',
+  ) ) );
+
+
+
+  //(PAGE: SERVICES) WHAT WE DO LEFT
+
+  $wp_customize->add_section( 'services_what_we_do_left_section' , array(
+    'title'      => __( '(PAGE: SERVICES) What We Do Left section', 'akad' ),
+    'priority'   => 30,
+  ) );
+  // (PAGE: SERVICES) WHAT WE DO LEFT TEXT
+  $wp_customize->add_setting( 'services_what_we_do_left_text' , array(
+    'default'   => 'Erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_what_we_do_left_text', array(
+    'label'      => __( 'Text', 'akad' ),
+    'section'    => 'services_what_we_do_left_section',
+    'settings'   => 'services_what_we_do_left_text',
+  ) ) );
+  // (PAGE: SERVICES) WHAT WE DO LEFT COLUMN1 ITEM1
+  $wp_customize->add_setting( 'services_what_we_do_left_column1_item1' , array(
+    'default'   => 'Stunning on all screens',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_what_we_do_left_column1_item1', array(
+    'label'      => __( 'Column 1 Item 1', 'akad' ),
+    'section'    => 'services_what_we_do_left_section',
+    'settings'   => 'services_what_we_do_left_column1_item1',
+  ) ) );
+  // (PAGE: SERVICES) WHAT WE DO LEFT COLUMN1 ITEM2
+  $wp_customize->add_setting( 'services_what_we_do_left_column1_item2' , array(
+    'default'   => 'Easy to customize',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_what_we_do_left_column1_item2', array(
+    'label'      => __( 'Column 1 Item 2', 'akad' ),
+    'section'    => 'services_what_we_do_left_section',
+    'settings'   => 'services_what_we_do_left_column1_item2',
+  ) ) );
+  // (PAGE: SERVICES) WHAT WE DO LEFT COLUMN1 ITEM3
+  $wp_customize->add_setting( 'services_what_we_do_left_column1_item3' , array(
+    'default'   => 'Make a difference',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_what_we_do_left_column1_item3', array(
+    'label'      => __( 'Column 1 Item 3', 'akad' ),
+    'section'    => 'services_what_we_do_left_section',
+    'settings'   => 'services_what_we_do_left_column1_item3',
+  ) ) );
+  // (PAGE: SERVICES) WHAT WE DO LEFT COLUMN1 ITEM4
+  $wp_customize->add_setting( 'services_what_we_do_left_column1_item4' , array(
+    'default'   => 'Imagine and create',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_what_we_do_left_column1_item4', array(
+    'label'      => __( 'Column 1 Item 4', 'akad' ),
+    'section'    => 'services_what_we_do_left_section',
+    'settings'   => 'services_what_we_do_left_column1_item4',
+  ) ) );
+  // (PAGE: SERVICES) WHAT WE DO LEFT COLUMN1 ITEM5
+  $wp_customize->add_setting( 'services_what_we_do_left_column1_item5' , array(
+    'default'   => 'Unlimited possibilities',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_what_we_do_left_column1_item5', array(
+    'label'      => __( 'Column 1 Item 5', 'akad' ),
+    'section'    => 'services_what_we_do_left_section',
+    'settings'   => 'services_what_we_do_left_column1_item5',
+  ) ) );
+  // (PAGE: SERVICES) WHAT WE DO LEFT COLUMN2 ITEM1
+  $wp_customize->add_setting( 'services_what_we_do_left_column2_item1' , array(
+    'default'   => 'Remarkable style',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_what_we_do_left_column2_item1', array(
+    'label'      => __( 'Column 2 Item 1', 'akad' ),
+    'section'    => 'services_what_we_do_left_section',
+    'settings'   => 'services_what_we_do_left_column2_item1',
+  ) ) );
+  // (PAGE: SERVICES) WHAT WE DO LEFT COLUMN2 ITEM2
+  $wp_customize->add_setting( 'services_what_we_do_left_column2_item2' , array(
+    'default'   => 'Captivating presentations',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_what_we_do_left_column2_item2', array(
+    'label'      => __( 'Column 2 Item 2', 'akad' ),
+    'section'    => 'services_what_we_do_left_section',
+    'settings'   => 'services_what_we_do_left_column2_item2',
+  ) ) );
+  // (PAGE: SERVICES) WHAT WE DO LEFT COLUMN2 ITEM3
+  $wp_customize->add_setting( 'services_what_we_do_left_column2_item3' , array(
+    'default'   => 'Make your portfolio pop',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_what_we_do_left_column2_item3', array(
+    'label'      => __( 'Column 2 Item 3', 'akad' ),
+    'section'    => 'services_what_we_do_left_section',
+    'settings'   => 'services_what_we_do_left_column2_item3',
+  ) ) );
+  // (PAGE: SERVICES) WHAT WE DO LEFT COLUMN2 ITEM4
+  $wp_customize->add_setting( 'services_what_we_do_left_column2_item4' , array(
+    'default'   => 'Words that matter',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_what_we_do_left_column2_item4', array(
+    'label'      => __( 'Column 2 Item 4', 'akad' ),
+    'section'    => 'services_what_we_do_left_section',
+    'settings'   => 'services_what_we_do_left_column2_item4',
+  ) ) );
+  // (PAGE: SERVICES) WHAT WE DO LEFT COLUMN2 ITEM5
+  $wp_customize->add_setting( 'services_what_we_do_left_column2_item5' , array(
+    'default'   => 'Satisfied clients',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_what_we_do_left_column2_item5', array(
+    'label'      => __( 'Column 2 Item 5', 'akad' ),
+    'section'    => 'services_what_we_do_left_section',
+    'settings'   => 'services_what_we_do_left_column2_item5',
+  ) ) );
+
+
+
+  //(PAGE: SERVICES) WHAT WE DO RIGHT
+
+  $wp_customize->add_section( 'services_what_we_do_right_section' , array(
+    'title'      => __( '(PAGE: SERVICES) What We Do Right section', 'akad' ),
+    'priority'   => 30,
+  ) );
+  // (PAGE: SERVICES) WHAT WE DO RIGHT IMAGE
+  $wp_customize->add_setting( 'services_what_we_do_right_image' , array(
+    'default'   => '',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'services_what_we_do_right_image', array(
+    'label'      => __( 'Image', 'akad' ),
+    'section'    => 'services_what_we_do_right_section',
+    'settings'   => 'services_what_we_do_right_image',
+  ) ) );
+
+
+
+  //(PAGE: SERVICES) BENEFITS
+
+  $wp_customize->add_section( 'services_benefits_section' , array(
+    'title'      => __( '(PAGE: SERVICES) Benefits section', 'akad' ),
+    'priority'   => 30,
+  ) );
+  // (PAGE: SERVICES) BENEFITS ITEM1 LOGO
+  $wp_customize->add_setting( 'services_benefits_item1_logo' , array(
+    'default'   => 'fas fa-water',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_benefits_item1_logo', array(
+    'label'      => __( 'Item 1 Logo', 'akad' ),
+    'section'    => 'services_benefits_section',
+    'settings'   => 'services_benefits_item1_logo',
+  ) ) );
+  // (PAGE: SERVICES) BENEFITS ITEM1 HEADLINE
+  $wp_customize->add_setting( 'services_benefits_item1_headline' , array(
+    'default'   => 'KEEP PULSE GOING',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_benefits_item1_headline', array(
+    'label'      => __( 'Item 1 Headline', 'akad' ),
+    'section'    => 'services_benefits_section',
+    'settings'   => 'services_benefits_item1_headline',
+  ) ) );
+  // (PAGE: SERVICES) BENEFITS ITEM1 TEXT
+  $wp_customize->add_setting( 'services_benefits_item1_text' , array(
+    'default'   => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_benefits_item1_text', array(
+    'label'      => __( 'Item 1 Text', 'akad' ),
+    'section'    => 'services_benefits_section',
+    'settings'   => 'services_benefits_item1_text',
+  ) ) );
+  // (PAGE: SERVICES) BENEFITS ITEM2 LOGO
+  $wp_customize->add_setting( 'services_benefits_item2_logo' , array(
+    'default'   => 'fas fa-infinity',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_benefits_item2_logo', array(
+    'label'      => __( 'Item 2 Logo', 'akad' ),
+    'section'    => 'services_benefits_section',
+    'settings'   => 'services_benefits_item2_logo',
+  ) ) );
+  // (PAGE: SERVICES) BENEFITS ITEM2 HEADLINE
+  $wp_customize->add_setting( 'services_benefits_item2_headline' , array(
+    'default'   => 'PASS THE LIMITS',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_benefits_item2_headline', array(
+    'label'      => __( 'Item 2 Headline', 'akad' ),
+    'section'    => 'services_benefits_section',
+    'settings'   => 'services_benefits_item2_headline',
+  ) ) );
+  // (PAGE: SERVICES) BENEFITS ITEM2 TEXT
+  $wp_customize->add_setting( 'services_benefits_item2_text' , array(
+    'default'   => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_benefits_item2_text', array(
+    'label'      => __( 'Item 2 Text', 'akad' ),
+    'section'    => 'services_benefits_section',
+    'settings'   => 'services_benefits_item2_text',
+  ) ) );
+  // (PAGE: SERVICES) BENEFITS ITEM3 LOGO
+  $wp_customize->add_setting( 'services_benefits_item3_logo' , array(
+    'default'   => 'far fa-lightbulb',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_benefits_item3_logo', array(
+    'label'      => __( 'Item 3 Logo', 'akad' ),
+    'section'    => 'services_benefits_section',
+    'settings'   => 'services_benefits_item3_logo',
+  ) ) );
+  // (PAGE: SERVICES) BENEFITS ITEM3 HEADLINE
+  $wp_customize->add_setting( 'services_benefits_item3_headline' , array(
+    'default'   => 'GREAT IDEAS',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_benefits_item3_headline', array(
+    'label'      => __( 'Item 3 Headline', 'akad' ),
+    'section'    => 'services_benefits_section',
+    'settings'   => 'services_benefits_item3_headline',
+  ) ) );
+  // (PAGE: SERVICES) BENEFITS ITEM3 TEXT
+  $wp_customize->add_setting( 'services_benefits_item3_text' , array(
+    'default'   => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_benefits_item3_text', array(
+    'label'      => __( 'Item 3 Text', 'akad' ),
+    'section'    => 'services_benefits_section',
+    'settings'   => 'services_benefits_item3_text',
+  ) ) );
+  // (PAGE: SERVICES) BENEFITS ITEM4 LOGO
+  $wp_customize->add_setting( 'services_benefits_item4_logo' , array(
+    'default'   => 'fas fa-sliders-h',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_benefits_item4_logo', array(
+    'label'      => __( 'Item 4 Logo', 'akad' ),
+    'section'    => 'services_benefits_section',
+    'settings'   => 'services_benefits_item4_logo',
+  ) ) );
+  // (PAGE: SERVICES) BENEFITS ITEM4 HEADLINE
+  $wp_customize->add_setting( 'services_benefits_item4_headline' , array(
+    'default'   => 'AWESOME SUPPORT',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_benefits_item4_headline', array(
+    'label'      => __( 'Item 4 Headline', 'akad' ),
+    'section'    => 'services_benefits_section',
+    'settings'   => 'services_benefits_item4_headline',
+  ) ) );
+  // (PAGE: SERVICES) BENEFITS ITEM4 TEXT
+  $wp_customize->add_setting( 'services_benefits_item4_text' , array(
+    'default'   => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_benefits_item4_text', array(
+    'label'      => __( 'Item 4 Text', 'akad' ),
+    'section'    => 'services_benefits_section',
+    'settings'   => 'services_benefits_item4_text',
+  ) ) );
+
+
+
+  //(PAGE: SERVICES) PRICING TOP
+
+  $wp_customize->add_section( 'services_pricing_top_section' , array(
+    'title'      => __( '(PAGE: SERVICES) Pricing Top section', 'akad' ),
+    'priority'   => 30,
+  ) );
+  // (PAGE: SERVICES) PRICING TOP HEADLINE
+  $wp_customize->add_setting( 'services_pricing_top_headline' , array(
+    'default'   => 'pricing plans',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_top_headline', array(
+    'label'      => __( 'Headline', 'akad' ),
+    'section'    => 'services_pricing_top_section',
+    'settings'   => 'services_pricing_top_headline',
+  ) ) );
+  // (PAGE: SERVICES) PRICING TOP TEXT
+  $wp_customize->add_setting( 'services_pricing_top_text' , array(
+    'default'   => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_top_text', array(
+    'label'      => __( 'Text', 'akad' ),
+    'section'    => 'services_pricing_top_section',
+    'settings'   => 'services_pricing_top_text',
+  ) ) );
+
+
+
+  //(PAGE: SERVICES) PRICING PLAN1
+
+  $wp_customize->add_section( 'services_pricing_plan1_section' , array(
+    'title'      => __( '(PAGE: SERVICES) Pricing Plan 1 section', 'akad' ),
+    'priority'   => 30,
+  ) );
+  // (PAGE: SERVICES) PRICING PLAN1 HEADLINE
+  $wp_customize->add_setting( 'services_pricing_plan1_headline' , array(
+    'default'   => 'BASIC',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan1_headline', array(
+    'label'      => __( 'Headline', 'akad' ),
+    'section'    => 'services_pricing_plan1_section',
+    'settings'   => 'services_pricing_plan1_headline',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN1 PRICE
+  $wp_customize->add_setting( 'services_pricing_plan1_price' , array(
+    'default'   => '$35.99 Monthly',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan1_price', array(
+    'label'      => __( 'Price', 'akad' ),
+    'section'    => 'services_pricing_plan1_section',
+    'settings'   => 'services_pricing_plan1_price',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN1 PLUS1
+  $wp_customize->add_setting( 'services_pricing_plan1_item1' , array(
+    'default'   => 'Lorem ipsum dolor sit amet',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan1_item1', array(
+    'label'      => __( 'PLUS 1', 'akad' ),
+    'section'    => 'services_pricing_plan1_section',
+    'settings'   => 'services_pricing_plan1_item1',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN1 PLUS2
+  $wp_customize->add_setting( 'services_pricing_plan1_item2' , array(
+    'default'   => 'Consectetuer adipiscing elit',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan1_item2', array(
+    'label'      => __( 'PLUS 2', 'akad' ),
+    'section'    => 'services_pricing_plan1_section',
+    'settings'   => 'services_pricing_plan1_item2',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN1 PLUS3
+  $wp_customize->add_setting( 'services_pricing_plan1_item3' , array(
+    'default'   => 'Sed diam nonummy',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan1_item3', array(
+    'label'      => __( 'PLUS 3', 'akad' ),
+    'section'    => 'services_pricing_plan1_section',
+    'settings'   => 'services_pricing_plan1_item3',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN1 PLUS4
+  $wp_customize->add_setting( 'services_pricing_plan1_item4' , array(
+    'default'   => 'Nibh euismod tincidunt',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan1_item4', array(
+    'label'      => __( 'PLUS 4', 'akad' ),
+    'section'    => 'services_pricing_plan1_section',
+    'settings'   => 'services_pricing_plan1_item4',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN1 PLUS5
+  $wp_customize->add_setting( 'services_pricing_plan1_item5' , array(
+    'default'   => 'Ut laoreet dolore',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan1_item5', array(
+    'label'      => __( 'PLUS 5', 'akad' ),
+    'section'    => 'services_pricing_plan1_section',
+    'settings'   => 'services_pricing_plan1_item5',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN1 PLUS6
+  $wp_customize->add_setting( 'services_pricing_plan1_item6' , array(
+    'default'   => 'Magna aliquam erat volutpat',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan1_item6', array(
+    'label'      => __( 'PLUS 6', 'akad' ),
+    'section'    => 'services_pricing_plan1_section',
+    'settings'   => 'services_pricing_plan1_item6',
+  ) ) );
+
+
+
+  //(PAGE: SERVICES) PRICING PLAN2
+
+  $wp_customize->add_section( 'services_pricing_plan2_section' , array(
+    'title'      => __( '(PAGE: SERVICES) Pricing Plan 2 section', 'akad' ),
+    'priority'   => 30,
+  ) );
+  // (PAGE: SERVICES) PRICING PLAN2 HEADLINE
+  $wp_customize->add_setting( 'services_pricing_plan2_headline' , array(
+    'default'   => 'ADVANCED',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan2_headline', array(
+    'label'      => __( 'Headline', 'akad' ),
+    'section'    => 'services_pricing_plan2_section',
+    'settings'   => 'services_pricing_plan2_headline',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN2 PRICE
+  $wp_customize->add_setting( 'services_pricing_plan2_price' , array(
+    'default'   => '$55.99 Monthly',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan2_price', array(
+    'label'      => __( 'Price', 'akad' ),
+    'section'    => 'services_pricing_plan2_section',
+    'settings'   => 'services_pricing_plan2_price',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN2 PLUS1
+  $wp_customize->add_setting( 'services_pricing_plan2_item1' , array(
+    'default'   => 'Lorem ipsum dolor sit amet',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan2_item1', array(
+    'label'      => __( 'PLUS 2', 'akad' ),
+    'section'    => 'services_pricing_plan2_section',
+    'settings'   => 'services_pricing_plan2_item1',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN2 PLUS2
+  $wp_customize->add_setting( 'services_pricing_plan2_item2' , array(
+    'default'   => 'Consectetuer adipiscing elit',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan2_item2', array(
+    'label'      => __( 'PLUS 2', 'akad' ),
+    'section'    => 'services_pricing_plan2_section',
+    'settings'   => 'services_pricing_plan2_item2',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN2 PLUS3
+  $wp_customize->add_setting( 'services_pricing_plan2_item3' , array(
+    'default'   => 'Sed diam nonummy',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan2_item3', array(
+    'label'      => __( 'PLUS 3', 'akad' ),
+    'section'    => 'services_pricing_plan2_section',
+    'settings'   => 'services_pricing_plan2_item3',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN2 PLUS4
+  $wp_customize->add_setting( 'services_pricing_plan2_item4' , array(
+    'default'   => 'Nibh euismod tincidunt',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan2_item4', array(
+    'label'      => __( 'PLUS 4', 'akad' ),
+    'section'    => 'services_pricing_plan2_section',
+    'settings'   => 'services_pricing_plan2_item4',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN2 PLUS5
+  $wp_customize->add_setting( 'services_pricing_plan2_item5' , array(
+    'default'   => 'Ut laoreet dolore',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan2_item5', array(
+    'label'      => __( 'PLUS 5', 'akad' ),
+    'section'    => 'services_pricing_plan2_section',
+    'settings'   => 'services_pricing_plan2_item5',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN2 PLUS6
+  $wp_customize->add_setting( 'services_pricing_plan2_item6' , array(
+    'default'   => 'Magna aliquam erat volutpat',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan2_item6', array(
+    'label'      => __( 'PLUS 6', 'akad' ),
+    'section'    => 'services_pricing_plan2_section',
+    'settings'   => 'services_pricing_plan2_item6',
+  ) ) );
+
+
+
+  //(PAGE: SERVICES) PRICING PLAN3
+
+  $wp_customize->add_section( 'services_pricing_plan3_section' , array(
+    'title'      => __( '(PAGE: SERVICES) Pricing Plan 3 section', 'akad' ),
+    'priority'   => 30,
+  ) );
+  // (PAGE: SERVICES) PRICING PLAN3 HEADLINE
+  $wp_customize->add_setting( 'services_pricing_plan3_headline' , array(
+    'default'   => 'smart',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan3_headline', array(
+    'label'      => __( 'Headline', 'akad' ),
+    'section'    => 'services_pricing_plan3_section',
+    'settings'   => 'services_pricing_plan3_headline',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN3 PRICE
+  $wp_customize->add_setting( 'services_pricing_plan3_price' , array(
+    'default'   => '$75.99 Monthly',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan3_price', array(
+    'label'      => __( 'Price', 'akad' ),
+    'section'    => 'services_pricing_plan3_section',
+    'settings'   => 'services_pricing_plan3_price',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN3 PLUS1
+  $wp_customize->add_setting( 'services_pricing_plan3_item1' , array(
+    'default'   => 'Lorem ipsum dolor sit amet',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan3_item1', array(
+    'label'      => __( 'PLUS 1', 'akad' ),
+    'section'    => 'services_pricing_plan3_section',
+    'settings'   => 'services_pricing_plan3_item1',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN3 PLUS2
+  $wp_customize->add_setting( 'services_pricing_plan3_item2' , array(
+    'default'   => 'Consectetuer adipiscing elit',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan3_item2', array(
+    'label'      => __( 'PLUS 2', 'akad' ),
+    'section'    => 'services_pricing_plan3_section',
+    'settings'   => 'services_pricing_plan3_item2',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN3 PLUS3
+  $wp_customize->add_setting( 'services_pricing_plan3_item3' , array(
+    'default'   => 'Sed diam nonummy',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan3_item3', array(
+    'label'      => __( 'PLUS 3', 'akad' ),
+    'section'    => 'services_pricing_plan3_section',
+    'settings'   => 'services_pricing_plan3_item3',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN3 PLUS4
+  $wp_customize->add_setting( 'services_pricing_plan3_item4' , array(
+    'default'   => 'Nibh euismod tincidunt',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan3_item4', array(
+    'label'      => __( 'PLUS 4', 'akad' ),
+    'section'    => 'services_pricing_plan3_section',
+    'settings'   => 'services_pricing_plan3_item4',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN3 PLUS5
+  $wp_customize->add_setting( 'services_pricing_plan3_item5' , array(
+    'default'   => 'Ut laoreet dolore',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan3_item5', array(
+    'label'      => __( 'PLUS 5', 'akad' ),
+    'section'    => 'services_pricing_plan3_section',
+    'settings'   => 'services_pricing_plan3_item5',
+  ) ) );
+  // (PAGE: SERVICES) PRICING PLAN3 PLUS6
+  $wp_customize->add_setting( 'services_pricing_plan3_item6' , array(
+    'default'   => 'Magna aliquam erat volutpat',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'services_pricing_plan3_item6', array(
+    'label'      => __( 'PLUS 6', 'akad' ),
+    'section'    => 'services_pricing_plan3_section',
+    'settings'   => 'services_pricing_plan3_item6',
+  ) ) );
+
+
+
+  //(PAGE: CONTACT) CONTACT LEFT SECTION
+
+  $wp_customize->add_section( 'contact_section' , array(
+    'title'      => __( '(PAGE: CONTACT) Contact Left Section', 'akad' ),
+    'priority'   => 30,
+  ) );
+  // (PAGE: CONTACT) CONTACT HEADLINE
+  $wp_customize->add_setting( 'contact_headline' , array(
+    'default'   => 'CONTACT INFO',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_headline', array(
+    'label'      => __( 'Headline', 'akad' ),
+    'section'    => 'contact_section',
+    'settings'   => 'contact_headline',
+  ) ) );
+  // (PAGE: CONTACT) CONTACT TEXT
+  $wp_customize->add_setting( 'contact_text' , array(
+    'default'   => 'Lorem ipsum dolor sit amet, conse adipisicing elit. Libero incidunt quod ab mollitia quia dolorum conse.',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_text', array(
+    'label'      => __( 'Text under Headline', 'akad' ),
+    'section'    => 'contact_section',
+    'settings'   => 'contact_text',
+  ) ) );
+  // (PAGE: CONTACT) CONTACT TEXT-LINE1
+  $wp_customize->add_setting( 'contact_line1' , array(
+    'default'   => '13D, Functional apartment, Unique colony,',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_line1', array(
+    'label'      => __( 'Text-line 1', 'akad' ),
+    'section'    => 'contact_section',
+    'settings'   => 'contact_line1',
+  ) ) );
+  // (PAGE: CONTACT) CONTACT TEXT-LINE2
+  $wp_customize->add_setting( 'contact_line2' , array(
+    'default'   => 'Agadir 86360',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_line2', array(
+    'label'      => __( 'Text-line 2', 'akad' ),
+    'section'    => 'contact_section',
+    'settings'   => 'contact_line2',
+  ) ) );
+  // (PAGE: CONTACT) CONTACT NUMBER1
+  $wp_customize->add_setting( 'contact_number1' , array(
+    'default'   => '+212 124-566-780',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_number1', array(
+    'label'      => __( 'Phone Number Line 1', 'akad' ),
+    'section'    => 'contact_section',
+    'settings'   => 'contact_number1',
+  ) ) );
+  // (PAGE: CONTACT) CONTACT NUMBER2
+  $wp_customize->add_setting( 'contact_number2' , array(
+    'default'   => '+212 124-566-780',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_number2', array(
+    'label'      => __( 'Phone Number Line 2', 'akad' ),
+    'section'    => 'contact_section',
+    'settings'   => 'contact_number2',
+  ) ) );
+  // (PAGE: CONTACT) CONTACT EMAIL
+  $wp_customize->add_setting( 'contact_email' , array(
+    'default'   => 'email@website.com',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_email', array(
+    'label'      => __( 'Email', 'akad' ),
+    'section'    => 'contact_section',
+    'settings'   => 'contact_email',
+  ) ) );
+
+
+
+  //(PAGE: CONTACT) CONTACT SOC LINKS SECTION
+
+  $wp_customize->add_section( 'contact_soc_section' , array(
+    'title'      => __( '(PAGE: CONTACT) Contact Soc Links Section', 'akad' ),
+    'priority'   => 30,
+  ) );
+  // (PAGE: CONTACT) LINK1
+  $wp_customize->add_setting( 'contact_link1' , array(
+    'default'   => 'https://www.facebook.com',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_link1', array(
+    'label'      => __( 'Link 1', 'akad' ),
+    'section'    => 'contact_soc_section',
+    'settings'   => 'contact_link1',
+  ) ) );
+  // (PAGE: CONTACT) LINK1 ICON
+  $wp_customize->add_setting( 'contact_link1_icon' , array(
+    'default'   => 'fab fa-facebook-f',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_link1_icon', array(
+    'label'      => __( 'Link 1 Icon(FONT AWESOME CODE)', 'akad' ),
+    'section'    => 'contact_soc_section',
+    'settings'   => 'contact_link1_icon',
+  ) ) );
+  // (PAGE: CONTACT) LINK2
+  $wp_customize->add_setting( 'contact_link2' , array(
+    'default'   => 'https://twitter.com',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_link2', array(
+    'label'      => __( 'Link 2', 'akad' ),
+    'section'    => 'contact_soc_section',
+    'settings'   => 'contact_link2',
+  ) ) );
+  // (PAGE: CONTACT) LINK2 ICON
+  $wp_customize->add_setting( 'contact_link2_icon' , array(
+    'default'   => 'fab fa-twitter',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_link2_icon', array(
+    'label'      => __( 'Link 2 Icon(FONT AWESOME CODE)', 'akad' ),
+    'section'    => 'contact_soc_section',
+    'settings'   => 'contact_link2_icon',
+  ) ) );
+  // (PAGE: CONTACT) LINK3
+  $wp_customize->add_setting( 'contact_link3' , array(
+    'default'   => 'https://www.youtube.com',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_link3', array(
+    'label'      => __( 'Link 3', 'akad' ),
+    'section'    => 'contact_soc_section',
+    'settings'   => 'contact_link3',
+  ) ) );
+  // (PAGE: CONTACT) LINK3 ICON
+  $wp_customize->add_setting( 'contact_link3_icon' , array(
+    'default'   => 'fab fa-youtube',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_link3_icon', array(
+    'label'      => __( 'Link 3 Icon(FONT AWESOME CODE)', 'akad' ),
+    'section'    => 'contact_soc_section',
+    'settings'   => 'contact_link3_icon',
+  ) ) );
+  // (PAGE: CONTACT) LINK4
+  $wp_customize->add_setting( 'contact_link4' , array(
+    'default'   => 'https://www.linkedin.com',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_link4', array(
+    'label'      => __( 'Link 4', 'akad' ),
+    'section'    => 'contact_soc_section',
+    'settings'   => 'contact_link4',
+  ) ) );
+  // (PAGE: CONTACT) LINK4 ICON
+  $wp_customize->add_setting( 'contact_link4_icon' , array(
+    'default'   => 'fab fa-linkedin',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_link4_icon', array(
+    'label'      => __( 'Link 4 Icon(FONT AWESOME CODE)', 'akad' ),
+    'section'    => 'contact_soc_section',
+    'settings'   => 'contact_link4_icon',
+  ) ) );
+  // (PAGE: CONTACT) LINK5
+  $wp_customize->add_setting( 'contact_link5' , array(
+    'default'   => 'https://www.pinterest.com',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_link5', array(
+    'label'      => __( 'Link 5', 'akad' ),
+    'section'    => 'contact_soc_section',
+    'settings'   => 'contact_link5',
+  ) ) );
+  // (PAGE: CONTACT) LINK5 ICON
+  $wp_customize->add_setting( 'contact_link5_icon' , array(
+    'default'   => 'fab fa-pinterest',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_link5_icon', array(
+    'label'      => __( 'Link 5 Icon(FONT AWESOME CODE)', 'akad' ),
+    'section'    => 'contact_soc_section',
+    'settings'   => 'contact_link5_icon',
+  ) ) );
+  // (PAGE: CONTACT) LINK6
+  $wp_customize->add_setting( 'contact_link6' , array(
+    'default'   => 'https://www.instagram.com',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_link6', array(
+    'label'      => __( 'Link 6', 'akad' ),
+    'section'    => 'contact_soc_section',
+    'settings'   => 'contact_link6',
+  ) ) );
+  // (PAGE: CONTACT) LINK6 ICON
+  $wp_customize->add_setting( 'contact_link6_icon' , array(
+    'default'   => 'fab fa-instagram',
+    'transport' => 'refresh',
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'contact_link6_icon', array(
+    'label'      => __( 'Link 6 Icon(FONT AWESOME CODE)', 'akad' ),
+    'section'    => 'contact_soc_section',
+    'settings'   => 'contact_link6_icon',
+  ) ) );
+
+
+
   //(PAGE: ABOUT US) newsletter
 
   $wp_customize->add_section( 'newsletter_section' , array(
@@ -637,6 +1439,7 @@ function akad_customize_register( $wp_customize ) {
     'section'    => 'newsletter_section',
     'settings'   => 'newsletter_right_text',
   ) ) );
+
 
 
   //(PAGE: ALL) footer
@@ -715,8 +1518,6 @@ function akad_customize_register( $wp_customize ) {
     'section'    => 'footer_section',
     'settings'   => 'footer_icon6',
   ) ) );
-
-
 }
 add_action( 'customize_register', 'akad_customize_register' );
 

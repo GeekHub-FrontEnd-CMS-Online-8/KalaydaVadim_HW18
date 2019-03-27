@@ -168,14 +168,29 @@ function connectAllForHome() {
     wp_enqueue_style( 'header-blog', AK_CSS_DIR.'/header-blog.css');
     wp_enqueue_style( 'blog', AK_CSS_DIR.'/blog.css');
   }
+
+  if( is_page('contact') ) {
+    wp_enqueue_style( 'header-us', AK_CSS_DIR.'/header-us.css');
+    wp_enqueue_style( 'contact', AK_CSS_DIR.'/contact.css');
+  }
+
+  if( is_page('services') ) {
+    wp_enqueue_style( 'header-us', AK_CSS_DIR.'/header-us.css');
+    wp_enqueue_style( 'services-whatwedo', AK_CSS_DIR.'/services-whatwedo.css');
+    wp_enqueue_style( 'services-benefits', AK_CSS_DIR.'/services-benefits.css');
+    wp_enqueue_style( 'pricing', AK_CSS_DIR.'/pricing.css');
+  }
+
   if( is_search() ) {
     wp_enqueue_style( 'header-blog', AK_CSS_DIR.'/header-blog.css');
     wp_enqueue_style( 'blog', AK_CSS_DIR.'/blog.css');
     wp_enqueue_style( 'search', AK_CSS_DIR.'/search.css');
   }
+
   if( is_404() ) {
     wp_enqueue_style( 'error', AK_CSS_DIR.'/error.css');
   }
+
   wp_enqueue_style( 'header', AK_CSS_DIR.'/header.css');
   wp_enqueue_script( 'header-js', AK_JS_DIR.'/header.js');
   wp_enqueue_style( 'newsletter', AK_CSS_DIR.'/newsletter.css');
@@ -199,8 +214,6 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-
 
 function create_post_type_ak_benefits() {
 

@@ -81,6 +81,15 @@
   align-items: center;
   text-align: center;
   margin-top: 0px;
+  transition: .2s;
+}
+
+.history__right__bottom-btn:hover {
+  background: #88FBD4;
+}
+
+.history__right__bottom-btn:active {
+  background: #61D4AD;
 }
 
 @media(min-width: 320px) and (max-width: 1150px) {
